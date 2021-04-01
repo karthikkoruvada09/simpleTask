@@ -1,0 +1,22 @@
+<div class="jumbotron bg-dark text-white">
+<div class="row">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 offset-4">
+        <p class="text-capitalize text-center font-weight-bold h2 text-danger">Login</p>
+        <form #ref="ngForm" (ngSubmit)="post(ref.value)">
+            <div class="form-group">
+              <label class="text-capitalize text-center font-weight-bold ">Mobile Number :</label>
+              <input type="number" class="form-control" id="username" required
+                aria-describedby="emailHelp" placeholder="Mobile Number" [(ngModel)]="obj.mobilenumber" name="mobilenumber">
+            </div>
+            <div class="form-group">
+              <label  class="text-capitalize text-center font-weight-bold ">Password :</label>
+              <input type="{{check?'text':'password'}}" class="form-control" id="password" placeholder="Password" required [(ngModel)]="obj.password" name="password">
+              <input type="checkbox" [(ngModel)]="check" name="check"><label>show password</label>
+            </div>
+            <div class="form-check">
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!ref.valid">Submit</button>
+          </form>
+    </div>
+</div>
+</div>
