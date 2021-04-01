@@ -15,7 +15,7 @@ app.get = async(req,res)=>{
 }
 
 app.post = async(req,res)=>{
-	const body = req.body;
+	const body = {mobilenumber:req.body.mobilenumber}
     await db.collection('form_data').insertOne(body);
     res.end();
 }
